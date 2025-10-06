@@ -1,3 +1,4 @@
+```cpp
 const int pinEntrada = 25;
 const int duracionBitMs = 100;
 const int tamanioMensaje = 8;
@@ -37,7 +38,6 @@ void loop() {
     }
   }
 
-  // Esperar exactamente la pausa antes de los bits
   delay(100);
 
   Serial.print("Mensaje recibido: ");
@@ -51,7 +51,6 @@ void loop() {
 
     noInterrupts();
     int flancosDetectados = flancos;
-    //Serial.print(flancos);
     interrupts();
 
     int umbralFlancos = 930;
@@ -64,4 +63,3 @@ void loop() {
   Serial.println("\n-------------------------------\n");
   delay(3000);
 }
-
